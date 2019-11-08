@@ -36,7 +36,9 @@ rules: # Each Selector will be a separate rule that itself will be a separate me
 
 Assuming you installed all required libs mentioned in `requirements.txt`, all you have to do is to run the command:
  
- `python parse_gen.py indi.yaml` where `indi.yaml` is the file that contains the content given above. If it runs successfully, it generates a file with name `olx_indi_test.py` which looks like below:
+ `python parse_gen.py indi.yaml` 
+ 
+ Where `indi.yaml` is the file that contains the content given above. If it runs successfully, it generates a file with name `olx_indi_test.py` which looks like below:
  
  ```
  import requests
