@@ -1,0 +1,12 @@
+script_name: olx_list.py
+main:
+  entry_url: https://www.olx.com.pk/houses_c1721
+  entry_function: fetch
+
+rules:
+    - name: links
+      type: array #Valid types: array,single
+      selector: li[data-aut-id=itemBox]  a
+      extract:
+        what: attribute
+        name: href

@@ -1,0 +1,18 @@
+script_name: olx_indi_test.py # Name of the scraper file
+main: # Code under _main_ function
+  entry_url: https://www.olx.com.pk/item/1-kanal-brand-bew-banglow-available-for-sale-in-wapda-town-iid-1009971253 # URL to be parsed
+  entry_function: parse # The function that uses requests library to fetch the data and calling Bs4
+
+rules: # Each Selector will be a separate rule that itself will be a separate method
+    - name: price
+      type: single #Valid types: array,single
+      selector: '#container > main > div > div > div.rui-2SwH7.rui-m4D6f.rui-1nZcN.rui-3CPXI.rui-3E1c2.rui-1JF_2 > div.rui-2ns2W._2r-Wm > div > section > span._2xKfz'
+      extract: #Either an attribute value or just text
+        what: text
+
+    - name: seller
+      type: single #Valid types: array,single
+      selector: '#container > main > div > div > div.rui-2SwH7.rui-m4D6f.rui-1nZcN.rui-3CPXI.rui-3E1c2.rui-1JF_2 > div.rui-2ns2W.YpyR- > div > div > div._1oSdP > div > a > div'
+      extract:
+        what: text
+
